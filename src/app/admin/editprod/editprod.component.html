@@ -1,0 +1,20 @@
+<div class="container">
+  
+    <div *ngFor="let prod of product">
+
+        <div class="row justify-content-center text-center p-5">
+            <div class="col-6">
+                <img src="{{prod.image}}" alt="" width="400px" class="shadow">
+            </div>
+            <div class="col text-start p-5 name">
+                <p><span class="text-secondary h4">Brand-Name : &ensp;</span><span class="h5">{{prod.brandName |uppercase}}</span></p><br>
+                    <p><span class="text-secondary h5">Model-Name : &ensp;</span><span class="h6">{{prod.modelName |uppercase}}</span></p>
+                    <button class="btn btn-outline-warning" routerLink="/addProduct/{{prod._id}}">Edit Product</button>
+
+            </div>
+           
+        </div>
+
+    </div>
+
+</div>

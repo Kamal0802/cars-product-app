@@ -1,0 +1,33 @@
+
+    <div class="h1 text-center text-secondary mt-5">
+        {{ "  Login for Admin Access " | uppercase }}
+      </div>
+      
+      <div class="container pt-1 mt-5">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div>
+            <label for="" class="form-label">UserName :</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Enter user name" />
+          </div>
+          <br />
+          <div>
+            <label for="" class="form-label">Password :</label>
+      
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter password" />
+          </div>
+          <br />
+          <div>
+            <button
+              class="btn btn-secondary"
+              [disabled]="loginForm.invalid"
+              type="submit"
+            >
+              login
+            </button>
+          </div>
+        </form>
+      </div>
+      
+
+
+

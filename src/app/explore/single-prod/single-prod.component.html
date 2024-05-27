@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row justify-content-evenly pb-5 ps-5 pe-5 pt-5">
+    <div class="col-6">
+      <img src="{{ prod.image }}" class="img-fluid shadow" alt="" width="900px" />
+    </div>
+    <div class="col-4 pt-3 align-self-center">
+      <p class="h4">
+        <strong class="text-secondary">Brand-Name : &ensp;</strong
+        ><span>{{ prod.brandName | uppercase }}</span>
+      </p>
+      <br />
+      <p class="h4">
+        <strong class="text-secondary">model-Name : &ensp;</strong
+        ><span>{{ prod.modelName | uppercase }}</span>
+      </p>
+      <br />
+      <h4>
+        <strong class="text-secondary">Car_Type : &ensp;</strong
+        ><span>{{ prod.carType | uppercase }}</span>
+      </h4>
+      <br />
+      <h4>
+        <strong class="text-secondary">Price : &ensp;</strong
+        ><span>{{ prod.price | currency : "USD" }}</span>
+      </h4>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pt-3">
+    <div class="col">
+      <h2 class="display-3">Description</h2>
+      <p class="lead">
+        Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Commodi ut iusto quasi quos voluptas rem
+        labore, eius expedita molestias excepturi. Veritatis, porro explicabo!
+        Numquam sapiente nesciunt totam. Laudantium, incidunt magnam.
+        adipisicing elit. Corrupti quod ratione in exercitationem blanditiis ex
+        fugiat deleniti optio cupiditate modi, unde quae! Consequatur minima
+        odio repudiandae, ut recusandae culpa qui?
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-center pb-5">
+    <div class="col">
+      <button class="btn btn-outline-primary" routerLink="/explore">
+        Explore more
+      </button>
+    </div>
+  </div>
+</div>

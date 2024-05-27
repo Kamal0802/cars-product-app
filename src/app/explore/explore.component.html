@@ -1,0 +1,34 @@
+
+<!-- <div *ngFor="let prod of product" class="row justify-content-evenly">
+    <div class="card col-md-4 prod" style="width: 18rem;">
+        <img src="{{prod.image}}" class="card-img-top p-2" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><small class="text-success">modelName - </small>{{prod.modelName | uppercase}} </h5>
+          <p><Strong class="text-info">price : </Strong>{{"$"+prod.price}} &ensp;  <strong class="text-warning">Brand : </strong>{{prod.brandName}}</p>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">see in Detail</a>
+        </div>
+      </div>
+
+</div> -->
+
+
+<div *ngFor="let prod of product" class="container mt-5">
+  <div class="row pb-3 p-4 justify-content-center justify-content-evenly">
+    <div class="col-lg-4 mb-2">
+      <img src="{{prod.image}}" alt="" width="400px" class="shadow">
+    </div>
+    <div class="col-lg-4">
+      <h4><span class="text-secondary">Model Name -  &ensp;</span> <span>{{prod.modelName}}</span></h4><br>
+      <p class="h5"><strong class="text-secondary">TYPE - &ensp;</strong><span>{{prod.carType  | uppercase}}</span></p><br>
+      <h6><strong class="text-secondary">Price - &ensp;$</strong> {{prod.price}} <strong class="text-secondary ms-5">Brand Name -</strong> {{prod.brandName}}</h6>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem debitis consequatur itaque dignissimos quasi quis odio odit molestias nostrum cum velit repudiandae officiis architecto, corrupti incidunt quam repellat iure unde!</p>
+      <button class="btn btn-outline-secondary" routerLink="/singleprod/{{prod._id}}">Explore in detail</button>
+    </div>
+  </div>        
+
+</div>
+
+
+
+

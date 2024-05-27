@@ -1,0 +1,35 @@
+<div class="bod mt-5">
+    <div class="row justify-content-center">
+        <div class="col-4 text-center">
+            <h4>Enter the catagories to search</h4><br>
+    
+            <p>(jeep,sports,family,van)</p>
+    
+            <form action="" [formGroup]="filter" (submit)="getvalue()" class="d-flex">
+                <input type="text" class="form-control" placeholder=" search" formControlName="catagory">&ensp;
+                <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+         
+            
+        </div>
+    </div>
+    
+    <div *ngFor="let prod of product" class="container mt-5">
+        <div *ngIf="searchtxt == prod.carType">
+            <div class="row pb-3 p-4 mb-3 justify-content-center justify-content-evenly">
+                <div class="col-lg-4 mb-2">
+                  <img src="{{prod.image}}" alt="" width="450px" class="shadow">
+                </div>
+                <div class="col-lg-4 ms-5">
+                  <h4><span class="text-secondary">Model Name -  &ensp;</span> <span>{{prod.modelName}}</span></h4><br>
+                  <p class="h5"><strong class="text-secondary">TYPE - &ensp;</strong><span>{{prod.carType  | uppercase}}</span></p><br>
+                  <h6><strong class="text-secondary">Price - &ensp;$</strong> {{prod.price}} <strong class="text-secondary ms-5">Brand Name -</strong> {{prod.brandName}}</h6>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem debitis consequatur itaque dignissimos quasi quis odio odit molestias nostrum cum velit repudiandae officiis architecto, corrupti incidunt quam repellat iure unde!</p>
+                  <button class="btn btn-outline-secondary" routerLink="/singleprod/{{prod._id}}">Explore in detail</button>
+                </div>
+              </div> 
+        </div>       
+      
+      </div>
+</div>
+

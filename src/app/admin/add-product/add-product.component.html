@@ -1,0 +1,44 @@
+<div class="pt-3">
+  
+<div class="text-center">
+    
+  <p class="h6">{{editProd!==null?"Edit":"Add "}} products here!</p>
+  </div> 
+  
+  <form action="" [formGroup]="productForm" (ngSubmit)="flag == 0 ?addCar():editCar()" class="p-5 me-5 ms-5 mb-5">
+    <div>
+      <label for="" class="form-label">Model Name</label><br>
+      <input type="text" placeholder="enter car name" class="form-control" formControlName="modelName">
+    </div><br>
+    <div>
+      <label for="" class="form-label">Brand Name</label><br>
+      <input type="text" placeholder="enter brand" class="form-control" formControlName="brandName">
+    </div><br>
+    <div>
+      <label for="" class="form-label">price</label><br>
+      <input type="number" placeholder="enter price" class="form-control" formControlName="price">
+    </div><br>
+    <div>
+      <label for="" class="form-label">car Type</label><br>
+     <select name="" id="" class="form-control" formControlName="carType">
+     
+      <option value="sports">sports</option>
+      <option value="jeep">jeep</option>
+      <option value="family">family</option>
+      <option value="van">van</option>
+     </select>
+    </div><br>
+    <div>
+      <label for="" class="form-label">image</label><br>
+      <input type="text" placeholder="enter image url" class="form-control" formControlName="image">
+    </div><br>
+  
+    <div>
+      <button class="btn btn-secondary" type="submit">{{flag==0?"add product":"edit product"}}</button>
+      <button class="btn btn-danger ms-5" type="button" routerLink="/dashboard">Back to Dashboard</button>
+    </div>
+  
+  
+  </form>
+</div>
+

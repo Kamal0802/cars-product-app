@@ -1,0 +1,15 @@
+li:hover{
+    color:rgb(108, 96, 79);
+    cursor: pointer;
+  }
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.head{
+  position:sticky;
+   z-index: 10; 
+   top: 0;
+   
+}

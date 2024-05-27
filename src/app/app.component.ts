@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kamal';
+  birthday = new Date();
+  no=[1,2,3,4,5]
 }
